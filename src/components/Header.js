@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Header() {
+
+  const [dateState, setDateState] = useState(new Date());
+
+  const renderDate = () => {
+    const date = dateState;
+    return date.toLocaleTimeString();
+  }
+
+  setInterval(() => {
+    setDateState(new Date());
+  }, 1000);
+
     return (
       <header>
         <div className="navbar bg-base-100">
@@ -15,13 +27,13 @@ function Header() {
             </ul>
           </div>
         </div>
-        <div class="hero min-h-screen" style="background-image: url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80);">
-          <div class="hero-overlay bg-opacity-60"></div>
-          <div class="hero-content text-center text-neutral-content">
-            <div class="max-w-md">
-              <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-              <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-              <button class="btn btn-primary">Get Started</button>
+        <div className="hero min-h-screen" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1746&q=80)"}}>
+          <div className="hero-overlay bg-opacity-60"></div>
+          <div className="hero-content text-center text-neutral-content">
+            <div className="max-w-md">
+              <h1 className="mb-5 text-5xl font-bold">{renderDate()}</h1>
+              <p className="mb-5">Welcome to the Space Dashboard - where you can view all the weather data for your next travel to space.</p>
+              <button className="btn btn-primary">Get Started</button>
             </div>
           </div>
         </div>
