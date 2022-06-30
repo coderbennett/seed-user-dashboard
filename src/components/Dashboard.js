@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function Dashboard() {
     return (
@@ -9,7 +10,9 @@ function Dashboard() {
                     <h2 className="card-title">Space Flight News</h2>
                     <p>Placeholder space flight text here</p>
                     <div className="card-actions justify-end">
-                    <button className="btn btn-primary">View News</button>
+                    <Link to="/space-flight-news">
+                        <button className="btn btn-primary">View News</button>
+                    </Link>
                     </div>
                 </div>
             </div>

@@ -3,8 +3,10 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer>
-            
+        <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+            <div>
+                <p>Copyright © 2022 - All right reserved by Space Weather Dashboard</p>
+            </div>
         </footer>
     );
 }
