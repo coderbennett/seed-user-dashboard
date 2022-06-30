@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
 
@@ -17,11 +18,11 @@ function Header() {
       <header>
         <div className="navbar bg-base-100 fixed top-0 w-100 z-50">
           <div className="flex-1">
-            <a className="btn btn-ghost normal-case text-xl">space weather dashboard</a>
+            <Link to="/"><a className="btn btn-ghost normal-case text-xl">space weather dashboard</a></Link>
           </div>
           <div className="flex-none">
             <ul className="menu menu-horizontal p-0">
-              <li><a>Spaceflight News</a></li>
+              <li><Link to="/space-flight-news">Spaceflight News</Link></li>
               <li><a>Item 2</a></li>
               <li><a>Item 3</a></li>
             </ul>
