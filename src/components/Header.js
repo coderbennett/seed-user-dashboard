@@ -16,15 +16,14 @@ function Header() {
 
     return (
       <header>
-        <div className="navbar bg-base-100 fixed top-0 w-100 z-50">
+        <div className="navbar bg-base-100">
           <div className="flex-1">
             <Link to="/"><button className="btn btn-ghost normal-case text-xl">space weather dashboard</button></Link>
           </div>
           <div className="flex-none">
             <ul className="menu menu-horizontal p-0">
               <li><Link to="/space-flight-news">Spaceflight News</Link></li>
-              <li>Item 2</li>
-              <li>Item 3</li>
+              <li><Link to="/coronal-mass-ejections">CMEs</Link></li>
             </ul>
           </div>
         </div>
